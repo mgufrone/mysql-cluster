@@ -1,0 +1,26 @@
+{
+    "name": "gufy/mysql-cluster",
+    "description": "",
+    "authors": [
+        {
+            "name": "Mochamad Gufron",
+            "email": "gufron@beon.co.id"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "lucor/laravel-auth-file-driver": "0.9.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations",
+            "src/controllers",
+            "src/commands"
+        ],
+        "psr-0": {
+            "Gufy\\MysqlCluster\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
