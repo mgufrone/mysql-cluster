@@ -77,8 +77,10 @@ class ClusterController extends \BaseController {
 	{
 		//
 		$this->layout->title = 'Edit Cluster';
-		$clusters = json_decode(file_get_contents(Config::get('mysql-cluster::config.path')));
-		$current_cluster = $clusters->connections->$id;
+		$clusters = json_decode(file_get_contents(Config::get('mysql-cluster::config.path')), 1);
+		$current_cluster = $clusters['connections'][$id];
+		sort($current_cluster['config']);
+		$current_cluster = (object)$current_cluster;
 		$name = $id;
 		$this->layout->content = View::make('mysql-cluster::clusters.edit', compact('clusters', 'current_cluster', 'name'));
 	}
