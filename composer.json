@@ -1,10 +1,17 @@
 {
     "name": "gufy/mysql-cluster",
-    "description": "",
+    "description": "Laravel MySQL Database connections failover clustering",
+    "keywords":[
+      "mysql",
+      "laravel",
+      "database",
+      "cluster",
+      "failover"
+    ],
     "authors": [
         {
             "name": "Mochamad Gufron",
-            "email": "gufron@beon.co.id"
+            "email": "mgufronefendi@gmail.com"
         }
     ],
     "require": {
